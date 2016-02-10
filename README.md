@@ -16,7 +16,9 @@ Date: Feb 10, 2016  1:00 am
 *require websocketd installed, can use command "brew install websocketd" for Mac or  mannual add path to websocketd file into the environment path in Linux
 
 after "chmod +x ./story.py" 
+
 run in command line "websocketd --port=8080 ./story.py"
+
 open index.html in chrome browser and the streaming should start.
 
 
@@ -32,19 +34,25 @@ The message volume could be increased by incorporating more search key words if 
 
 
 - Consume the messages in the stream using technology of your choice. (40%) Your solution should expect to stay on forever. It should:
+  
   * consume the stream from its source
+  
   story.py utilizes Twitter API to search recent tweets pertaining to the topic "Superbowl"
 
   * perform any basic cleaning, transformations, or filters (optional)
+  
   story.py reorganize the retrieved tweet information and rearrange them into the desired format as displayed in the index.html/printed in the terminal
 
   * writes the output of the consumer to stdout so we can see it in a terminal
+  
   story.py uses print command to print out each of the rephrased tweets.
 
 - Create a websocket server that emits the messages and webpage that consumes them. The webpage can be as simple or as complex as you'd like; we simply want to make sure everyone can get data onto a webpage. Plese use the Chrome web browser. (20%)
   
   open index.html in google after starting the Websocketd server by following the guideline in the instruction section
+  
   All tweets are displayed in chronological order. 100 tweets are displayed in each round.
+  
   Streaming data refreshed every 10 mins (this can be changed by modifying the story.py code last line  "time.sleep(xx)"  refresh time xx sec)
 
 
