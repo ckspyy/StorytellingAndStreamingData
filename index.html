@@ -1,0 +1,29 @@
+<html>
+<head><title>
+Welcome to live SuperBowl Tweet Streaming!</title>
+</head>
+<h1 align="center"><b> <font color="BLUE" size="10"> Welcome to live SuperBowl Tweet Streaming!</font></b></h1>
+<body style="background-color:Lavender;">
+ <div id="content"></div>
+<script>
+var ws = new WebSocket('ws://localhost:8080/');
+count=1;
+ws.onmessage = function(event) {
+	console.log(event.data);
+	var div = document.getElementById('content');
+	var substr = "Tweet #";
+	if (event.data.indexOf(substr)>-1){ 
+		div.innerHTML = div.innerHTML + event.data+count+"<br>";
+		count++;}
+	else if(event.data.indexOf("#clearcode#")>-1){ 
+		div.innerHTML = "";
+		count=1}
+	else {div.innerHTML = div.innerHTML+event.data +"<br>";}
+	
+};
+</script>
+
+</div>
+</body>
+
+</html>
