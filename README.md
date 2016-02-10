@@ -10,7 +10,9 @@ Date: Feb 10, 2016  1:00 am
 -Instruction to execute the streaming application 
 
 *Websocket Server running on python script
+
 *files include:  story.py,  index.html
+
 *require websocketd installed, can use command "brew install websocketd" for Mac or  mannual add path to websocketd file into the environment path in Linux
 
 after "chmod +x ./story.py" 
