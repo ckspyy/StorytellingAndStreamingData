@@ -10,6 +10,7 @@ from tweepy import API
 from tweepy import AppAuthHandler
 from tweepy import Cursor
 from tweepy.streaming import StreamListener
+import Unicodedata
 import re
 import time
 
@@ -39,7 +40,7 @@ if __name__ == '__main__':
                     source=subtweet.source
                     result= "Tweet #"+"\nuserid:"+"{0:20}".format(userid)+" tweeted\n"+"{0:160}".format(content[3:].encode('utf-8'))+"\nat "+"{0:20}".format(timeline)+ " from "+"{0:20}".format(source)+"\n"
                     print result
-                except:
+                except UnicodeEncodeError:
                     # catching ascii encoding errors to prevent accidental server disconnectioin
                     pass
             break
