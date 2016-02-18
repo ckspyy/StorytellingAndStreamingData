@@ -7,19 +7,19 @@ Welcome to live SuperBowl Tweet Streaming!</title>
  <div id="content"></div>
 <script>
 var ws = new WebSocket('ws://localhost:8080/');
-count=100;
+count=1;
 ws.onmessage = function(event) {
 	console.log(event.data);
 	var div = document.getElementById('content');
 	var substr = "Tweet #";
-	if (count>0){ 
-		div.innerHTML =event.data+"<br>"+div.innerHTML;
-		}
-	else {
-		count=100;
-		div.innerHTML =event.data +"<br>";
-	}
-	count--
+	if (event.data.indexOf(substr)>-1){ 
+		div.innerHTML = div.innerHTML + event.data+count+"<br>";
+		count++;}
+	else if(event.data.indexOf("#clearcode#")>-1){ 
+		div.innerHTML = "";
+		count=1}
+	else {div.innerHTML = div.innerHTML+event.data +"<br>";}
+	
 };
 </script>
 
