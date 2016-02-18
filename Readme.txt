@@ -1,5 +1,5 @@
 
-This live streaming is for tweets from New York City  (frequency every 10mins)
+This live streaming is for tweets from New York City on football/SuperBowl 
 
 Name: Yao Yang
 Date: Feb 10, 2016  1:00 am
@@ -25,7 +25,9 @@ Why tweets? the giant collection of tweets from new york may seem messy at curre
 
 The estimated volume of messges are ~10000 tweets/hr (estmated by observation for multiple 10 secs window and take the average using this streaming application)
 
-The purpose of this streaming is to eventually serve as quick summary of regional opinions from New York City on the recent hot sport topic: football 
+The purpose of this streaming is to eventually serve as summary of current regional opinions from New York City on the recent hot sport topic: football
+
+why this matters? Football is an extremely popular event and many people cares about it. But newspaper, TV shows have latencies when reporting public opinions on such topics as the publication process takes time.  By streaming and doing some prelimilary processing of regional tweets on this topic, we can provide the public a more current view of the trending opinions on the topics that they care about. 
 
 
 - Consume the messages in the stream using technology of your choice. (40%) Your solution should expect to stay on forever. It should:
