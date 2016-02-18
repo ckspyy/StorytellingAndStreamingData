@@ -1,10 +1,12 @@
 # StorytellingAndStreamingData
 HW1
 
-This live streaming is for tweets about SuperBowl  (frequency every 10mins)
+This live streaming is for tweets from New York City on football/SuperBowl 
 
 Name: Yao Yang
 Date: Feb 10, 2016  1:00 am
+
+- using stream method instead of continous search API in case search does not count as streaming. 2016/02/17
 
 
 -Instruction to execute the streaming application 
@@ -20,12 +22,27 @@ open index.html in chrome browser and the streaming should start.
 
 - Find, or create, a stream of data. This can be anything you find compelling, and can be an event stream or a polled API. Write a README.md describing what an individual message in the stream represents in the real world, and therefore what volume of messages you expect in the stream. (40%)
 
-each individual message in the stream is composed of the sender userid of tweet, tweet content, time and the device on which the tweet is created.
-The real world meaning of these individual messages are public opinions about the recent hot topic event Super Bowl from social media. be it from a 10 years old or a 80 years old, a man or a women, positive or negative, all these opinions get collected.  
+each individual message in the stream is composed of the creation timeline, sender username, tweet content.
+
+The real world meaning of these individual messages are public opinions expressed by people from New York city on NFL/superbowl/football topics. Be the sender a 10 years old or a 80 years old, a man or a women, positive or negative, all public opinions get collected. 
+
+Simply displaying such data data.
+
 In later assignments, such information/opinions could go through sentiment analysis or filtering and provide us a unique view on current affairs.
 
-The estimated volume of messges are ~1500 related tweets/hr (based on observation using this streaming application)
-The message volume could be increased by incorporating more search key words if needed. 
+Why tweets? the giant collection of tweets from new york may seem messy at current stage. However, with certain analysis or filtering we could produce more interesting updates to public about what people in new york city thinks about superbowl. 
+
+The estimated volume of messges are ~10000 tweets/hr (estmated by observation for multiple 10 secs window and take the average using this streaming application)
+
+The purpose of this streaming is to eventually serve as summary of current regional opinions from New York City on the recent hot sport topic: football.
+
+why this matters? 
+
+Football is an extremely popular event and many people cares about it. 
+
+But newspaper, TV shows have latencies when reporting public opinions on such topics as the publication process takes time.  
+
+By streaming and doing some prelimilary processing of regional tweets on this topic, we can provide the public a more current view of the trending opinions on the topics that they care about. 
 
 
 - Consume the messages in the stream using technology of your choice. (40%) Your solution should expect to stay on forever. It should:
