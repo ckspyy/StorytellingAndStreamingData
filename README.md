@@ -6,16 +6,21 @@ This live streaming is for tweets from New York City on football/SuperBowl
 Name: Yao Yang
 Date: Feb 10, 2016  1:00 am
 
-- using stream method instead of continous search API in case search does not count as streaming. 2016/02/17
+-using stream method instead of continous search API in case search does not count as streaming. 2016/02/17
 
 
 -Instruction to execute the streaming application 
+ 
  *Websocket Server running on python script
+ 
  *files include:  story.py,  index.html
+ 
  *require websocketd installed, can use command "brew install websocketd" for Mac or  mannual add path to websocketd file into the environment path in Linux
 
 after "chmod +x ./story.py" 
+
 run in command line "websocketd --port=8080 ./story.py"
+
 open index.html in chrome browser and the streaming should start.
 
 
@@ -25,8 +30,6 @@ open index.html in chrome browser and the streaming should start.
 each individual message in the stream is composed of the creation timeline, sender username, tweet content.
 
 The real world meaning of these individual messages are public opinions expressed by people from New York city on NFL/superbowl/football topics. Be the sender a 10 years old or a 80 years old, a man or a women, positive or negative, all public opinions get collected. 
-
-Simply displaying such data data.
 
 In later assignments, such information/opinions could go through sentiment analysis or filtering and provide us a unique view on current affairs.
 
