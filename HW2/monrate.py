@@ -2,6 +2,7 @@
 
 # this program is for the developers to monitor the rate of tweets incoming
 # alert will be triggered to request some human being to look at the current topics and conduct a more detailed report/ find other popular topics for the streaming app
+# partial code reference to https://github.com/mikedewar/RealTimeStorytelling
 import redis
 import json
 import time
