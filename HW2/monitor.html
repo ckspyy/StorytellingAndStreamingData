@@ -1,0 +1,30 @@
+<html>
+<head><title>
+Tweet Streaming Backend Monitoring</title>
+</head>
+<h1 align="center"><b> <font color="BLUE" size="10"> Welcome to Tweet Streaming Backend Monitor!</font></b></h1>
+<body style="background-color:Lavender;">
+ <div id="content"></div>
+<script>
+var ws = new WebSocket('ws://localhost:8080/');
+count=1
+ws.onmessage = function(event) {
+	console.log(event.data);
+	var div = document.getElementById('content');
+	var currentTime= new Date();
+	if (count<50){
+		div.innerHTML =currentTime + event.data +"<br>"+div.innerHTML;
+		count=count+1;
+	}
+	else{
+		div.innerHTML =currentTime + event.data +"<br>";
+		count=1;
+	}
+
+};
+</script>
+
+</div>
+</body>
+
+</html>
